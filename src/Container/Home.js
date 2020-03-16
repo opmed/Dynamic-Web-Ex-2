@@ -21,7 +21,7 @@ function Home() {
   const [humidity, setHumidity] = useState("");
   const [windSpeed, setWindSpeed] = useState("");
   const [cloudiness, setCloudiness] = useState(0);
-  const [weatherType, setWeatherType] = useState("Clouds");
+  const [weathertype, setWeathertype] = useState("Clouds");
 
   let history=useHistory();
 
@@ -41,12 +41,10 @@ function Home() {
     	axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${defaultKey}`)
    .then(function (response) {
     // handle success
-    console.log(response);
     setWeatherData(response.data);
   })
     .catch(function (error) {
     // handle error
-    console.log(error);
   });
 
 }, [city]);
@@ -63,7 +61,7 @@ useEffect(() => {
     setHumidity(weatherData.main.humidity);
     setWindSpeed(weatherData.wind.speed);
 
-    setWeatherType(weatherData.weather[0].main);
+    setWeathertype(weatherData.weather[0].main);
   }
 }, [weatherData]);
 
@@ -78,7 +76,7 @@ return (
      <div className="Home">
         <h1>Weather in {city}</h1>
         <div className="WeatherInfo">
-           <WeatherImage weatherType={weatherType} />
+           <WeatherImage weathertype={weathertype} />
            <div className="WeatherInfo_Data">
               <div className="CurrentTemperature">
                 <p className="CurrentTemperature_Temp">

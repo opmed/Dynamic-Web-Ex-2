@@ -4,11 +4,14 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import "./App.css"
 
 import Header from "./Components/Header"
+import WeatherImage from "./Components/WeatherImage"
 import Home from "./Container/Home"
 
-function App() {
-	return(
 
+function App() {
+
+	return(
+       
 		<div className="SiteWrapper">
 		  <Header />
 		  <Router>
@@ -19,8 +22,16 @@ function App() {
 		      </Switch>
 		   </Router>    
 		</div>
-
   );
 }
 
+/*Change background color*/
+function changeBackground(color) {
+   document.body.style.background = color;
+}
+window.addEventListener("load",function() { changeBackground('lightblue') });
+
+
+
 export default App;
+

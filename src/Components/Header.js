@@ -10,7 +10,7 @@ function Header() {
             <a href="/?city=tokyo">Tokyo</a>
             <a href="/?city=seoul">Seoul</a>
             <a href="/?city=chicago">Chicago</a>
-            <a href="/?city=toranto">Toranto</a>
+            <a href="/?city=toranto">Toronto</a>
           </div>
        </div>
   );

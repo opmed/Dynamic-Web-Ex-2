@@ -4,6 +4,7 @@
   width: 100%;
   padding: 0 25px;
   text-align: center;
+  z-index: 1;
 }
 
 .Home {
@@ -77,6 +78,12 @@
 }
 .CitiesNav .active{
   color: green;
+}
+
+@media (max-width: 615px){
+  .CitiesNave {
+    font-size: 10px;
+  }
 }
 
 

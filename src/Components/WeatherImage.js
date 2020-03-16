@@ -1,5 +1,6 @@
 import React from "react";
 
+import Header from "../Components/Header";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
 	faCloud,
@@ -7,11 +8,11 @@ import {
 	faSun,
 	faSmog,
 	faRainbow
-} from "fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons";
 
 
-const Icon = ({weatherType}) => {
-	switch (weatherType) {
+const Icon = ({weathertype}) => {
+	switch (weathertype) {
 
 		case "Clouds":
 		   return <FontAwesomeIcon icon={faCloud} />;
@@ -30,10 +31,10 @@ const Icon = ({weatherType}) => {
 	}
 };
 
-function WeatherImage({weatherType}) {
+function WeatherImage({weathertype}) {
 	return (
 		<div className="weatherInfo_Image">
-		  <icon weatherType={weatherType} />
+		  <icon weathertype={weathertype} />
 		</div>
 	);
 }
